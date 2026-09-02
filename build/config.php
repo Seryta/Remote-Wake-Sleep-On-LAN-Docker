@@ -41,6 +41,9 @@
 	// You can create a windows scheduled task that starts sleeponlan.exe on boot with following startup parameters /auto /port=7760
 	$COMPUTER_SLEEP_CMD = "REPLACE_RWSOLS_SLEEP_CMD";
 
+	// Network interface used to send WOL packets (etherwake -i). Empty = auto-detect the interface of the default route.
+	$WOL_INTERFACE = "REPLACE_RWSOLS_WOL_INTERFACE";
+
 	// This is the location of the bootstrap style folder relative to your index and config file. Default = "" (Same folder as this file)
 	// Directory must be called "bootstrap". You may wish to move if this WOL script is the "child" of a larger web project on your Pi, that will also use bootstrap styling.
 	// If if it on directory up, for example, you would set this to "../"

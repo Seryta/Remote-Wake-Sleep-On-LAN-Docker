@@ -22,6 +22,9 @@ done
 RWSOLS_HASH=$(php -r "echo password_hash(\"$PASSPHRASE\", PASSWORD_DEFAULT);")
 search_and_replace RWSOLS_HASH $RWSOLS_HASH
 
+#WOL interface: empty -> auto-detect interface of the default route (handled in index.php)
+search_and_replace REPLACE_RWSOLS_WOL_INTERFACE ${RWSOLS_WOL_INTERFACE:-}
+
 
 #APACHE2 port mapping
 echo "search_and_replace port 8080 with $APACHE2_PORT"
